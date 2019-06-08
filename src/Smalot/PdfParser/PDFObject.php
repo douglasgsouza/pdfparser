@@ -345,13 +345,13 @@ class PDFObject
                         if ($current_position_tm['x'] !== false) {
                             $delta = abs(floatval($x) - floatval($current_position_tm['x']));
                             if ($delta > 10) {
-                                $text .= "\t";
+                                $text = trim($text, ' ') . "\t";
                             }
                         }
                         if ($current_position_tm['y'] !== false) {
                             $delta = abs(floatval($y) - floatval($current_position_tm['y']));
                             if ($delta > 10) {
-                                $text .= "\n";
+                                $text = trim($text, ' ') . "\n";
                             }
                         }
                         $current_position_tm = array('x' => $x, 'y' => $y);

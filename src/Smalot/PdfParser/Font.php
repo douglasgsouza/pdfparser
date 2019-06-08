@@ -404,7 +404,7 @@ class Font extends PDFObject
             $word         = $this->decodeContent($word, $loop_unicode);
         }
 
-        return implode(' ', $words);
+        return implode(' ', $words) . ' ';
     }
 
     /**
